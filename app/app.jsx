@@ -1,6 +1,16 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Route, Router, IndexRoute, hashHistory} from 'react-router';
+import {Provider} from 'react-redux';
+
+import Leaderboard from 'Leaderboard';
+const store = require('configureStore').configure();
+import Nav from 'Nav';
+import * as actions from 'actions';
+import fccLeaderAPI from 'fccLeaderAPI';
+
+fccLeaderAPI.getRecent();
+actions.getRecentUsers();
 
 //Load Foundation
 $(document).foundation();
@@ -9,6 +19,9 @@ $(document).foundation();
 require('style!css!sass!applicationStyles');
 
 ReactDOM.render(
-	<p>Boilerplate 3 project</p>,
-	document.getElementById('app')
-	);
+	<Provider store={store}>
+		<div>
+			<Nav />
+			<Leaderboard />
+		</div>
+	</Provider>,document.getElementById('app'));
