@@ -1,4 +1,3 @@
-import uuid from 'node-uuid';
 import axios from 'axios';
 
 export let addRecentUsers = (recentUsers) => {

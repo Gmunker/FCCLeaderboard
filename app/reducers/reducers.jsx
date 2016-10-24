@@ -9,6 +9,3 @@ export let recentUsersReducer = (state = [], action) => {
       return state;
   }
 }
-
-
-// Cannot get the users array into the store...

@@ -5,11 +5,9 @@ import {Provider} from 'react-redux';
 
 import Leaderboard from 'Leaderboard';
 const store = require('configureStore').configure();
-import Nav from 'Nav';
 import * as actions from 'actions';
 import fccLeaderAPI from 'fccLeaderAPI';
 
-fccLeaderAPI.getRecent();
 actions.getRecentUsers();
 
 //Load Foundation
@@ -21,7 +19,6 @@ require('style!css!sass!applicationStyles');
 ReactDOM.render(
 	<Provider store={store}>
 		<div>
-			<Nav />
 			<Leaderboard />
 		</div>
 	</Provider>,document.getElementById('app'));

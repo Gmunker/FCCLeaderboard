@@ -11,17 +11,5 @@ module.exports = {
       console.log('API OUTPUT:')
       console.table(res.data);
     });
-  },
-
-  getAllTime() {
-    const requestAllTimeURL = FCC_ALLTIME_LEADER_URL;
-
-    return axios.get(requestAllTimeURL).then(function(res) {
-      if (res.status !== 200) {
-        throw new Error(res.statusText);
-      } else {
-        return res.data;
-      }
-    })
   }
 }
