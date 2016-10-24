@@ -17,7 +17,7 @@ class UserList extends React.Component {
     }
     return (
       <div>
-        {recentUsers}
+        {test}
       </div>
     )
   }
