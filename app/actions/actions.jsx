@@ -1,5 +1,5 @@
 import uuid from 'node-uuid';
-var axios = require('axios');
+import axios from 'axios';
 
 export let addRecentUsers = (recentUsers) => {
   return {type: "ADD_RECENT_USERS", recentUsers}
