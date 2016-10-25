@@ -4,7 +4,7 @@ import {Route, Router, IndexRoute, hashHistory} from 'react-router';
 import {Provider} from 'react-redux';
 
 const store = require('configureStore').configure();
-const actions = require('actions');
+import * as actions from 'actions';
 
 let users = [
 	{
