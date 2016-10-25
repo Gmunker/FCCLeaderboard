@@ -4,14 +4,14 @@ import {connect} from 'react-redux';
 export class Users extends React.Component {
   render() {
     let {username, img, alltime, recent, lastUpdate} = this.props;
-
     return (
-      <div>
-        <p>{username}</p>
-        <p>{recent}</p>
-        <p>{alltime}</p>
-        <img src={img} height="100px" width="100px" />
-      </div>
+      <tr>
+        <td>""</td>
+        <td>{username}</td>
+        <td>{recent}</td>
+        <td>{alltime}</td>
+        <td>{lastUpdate.substr(0,10)}</td>
+      </tr>
     )
   }
 };
