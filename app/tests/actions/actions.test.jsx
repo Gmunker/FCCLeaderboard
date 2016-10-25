@@ -43,6 +43,7 @@ describe('Actions', () => {
     store.dispatch(action).then(() => {
       const mockActions = store.getActions();
       expect(mockActions[0].type).toEqual('ADD_RECENT_USERS');
+      expect(mockActions[0].recentUsers.length).toBe(1);
       done();
     }, done);
   });// should add users....
