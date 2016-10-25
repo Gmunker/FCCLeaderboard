@@ -1,11 +1,11 @@
-export let recentUsersReducer = (state = [], action) => {
-  switch(action.type) {
-    case 'ADD_RECENT_USERS':
+export let recentUsersReducer = (state = ["Default State"], action) => {
+  switch (action.type) {
+    case "ADD":
       return [
         ...state,
         ...action.recentUsers
       ];
     default:
       return state;
-  }
-}
+  };
+};

@@ -1,17 +1,3 @@
-//import axios from 'axios';
-
 export let addRecentUsers = (recentUsers) => {
-  return {
-    type: "ADD_RECENT_USERS",
-    recentUsers
-  }
+	return {type: "ADD", recentUsers};
 };
-
-// export let getRecentUsers = () => {
-//   return (dispatch, getState) => {
-//     const requestRecentURL = "https://fcctop100.herokuapp.com/api/fccusers/top/recent";
-//     return axios.get(requestRecentURL).then((res) => {
-//       dispatch(addRecentUsers(res.data));
-//     });
-//   };
-// };
