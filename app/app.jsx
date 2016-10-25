@@ -6,13 +6,8 @@ import {Provider} from 'react-redux';
 const store = require('configureStore').configure();
 import * as actions from 'actions';
 
-let users = [
-	{
-	username: "sjames1958gm"
-	}
-]
-
-actions.addRecentUsers(users);
+store.dispatch(actions.getRecentUsers());
+store.dispatch(actions.getAlltimeUsers());
 
 //Load Foundation
 $(document).foundation();
