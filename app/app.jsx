@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 
 const store = require('configureStore').configure();
 import * as actions from 'actions';
+import Leaderboard from 'Leaderboard';
 
 store.dispatch(actions.getRecentUsers());
 store.dispatch(actions.getAlltimeUsers());
@@ -18,6 +19,6 @@ require('style!css!sass!applicationStyles');
 ReactDOM.render(
 	<Provider store={store}>
 		<div>
-			<h3>App Component</h3>
+			<Leaderboard />
 		</div>
 	</Provider>,document.getElementById('app'));

@@ -4,20 +4,15 @@ import Users from 'Users';
 
 class UserList extends React.Component {
   render() {
-    let {recentUsers} = this.props;
-    console.log('USER LIST OUTPUT:')
-    console.table(recentUsers);
+    let {recentUsers, alltimeUsers} = this.props;
     let test = () => {
-      let userKey = (key = 1) => {
-        return key++;
-      }
       return recentUsers.map((user) => {
-        return (<Users key={userKey} {...user}/>)
+        return (<Users key={user.username} {...user} />)
       })
     }
     return (
       <div>
-        {test}
+        {test()}
       </div>
     )
   }

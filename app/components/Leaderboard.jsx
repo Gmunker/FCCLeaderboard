@@ -1,9 +1,15 @@
 import React from 'react';
 
+import Nav from 'Nav';
+import UserList from 'UserList';
+
 class Leaderboard extends React.Component {
   render() {
     return (
-      <p>Leaderboard Component</p>
+      <div>
+        <Nav />
+        <UserList />
+      </div>
     )
   }
 };

@@ -3,12 +3,14 @@ import {connect} from 'react-redux';
 
 export class Users extends React.Component {
   render() {
-    let {username} = this.props;
+    let {username, img, alltime, recent, lastUpdate} = this.props;
 
     return (
       <div>
-        {username}
-        <p>something else</p>
+        <p>{username}</p>
+        <p>{recent}</p>
+        <p>{alltime}</p>
+        <img src={img} height="100px" width="100px" />
       </div>
     )
   }
