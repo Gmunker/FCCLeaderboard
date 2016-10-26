@@ -10,7 +10,7 @@ class UserList extends React.Component {
     let {recentUsers, alltimeUsers} = this.props;
     let renderedUsers = () => {
       let rank = 1;
-      return alltimeUsers.map((user) => {
+      return alltimeUsers.map((user) => { 
         return (<Users key={user.username} rank={rank++} {...user} />)
       })
     }
