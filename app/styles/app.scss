@@ -6,11 +6,7 @@
 @include foundation-everything;
 
 //components
+@import "components/lists";
 @import "components/nav";
-@import "components/recentusers";
-@import "components/alltimeusers";
-@import "components/landingpage";
+@import "components/sitedefaults";
 @import "components/users";
-
-//fonts
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');

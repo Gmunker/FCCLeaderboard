@@ -17,7 +17,7 @@ class UserList extends React.Component {
       })
     }
     return (
-      <div className="columns small-12 medium-8 large-6 small-centered">
+      <div className="columns small-12 medium-12 large-8 small-centered">
         <Nav />
         <table>
           <thead>

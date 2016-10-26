@@ -1,7 +1,7 @@
 {
-  "name": "boilderplate",
+  "name": "FreeCodeCamp Leaderboard App",
   "version": "1.0.0",
-  "description": "Simple React app",
+  "description": "FreeCodeCamp Leaderboard ReactJS Project App",
   "main": "index.js",
   "scripts": {
     "test": "karma start",
