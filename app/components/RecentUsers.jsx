@@ -1,8 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-
-import sortUsersAPI from 'sortUsersAPI';
 import Users from 'Users';
 import Nav from 'Nav';
 
