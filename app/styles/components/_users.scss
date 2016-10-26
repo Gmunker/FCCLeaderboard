@@ -1,0 +1,21 @@
+.user-row {
+
+
+
+  p {
+    font-size: 16px;
+  }
+
+  .td-username-link {
+    display: flex;
+
+    .userpic {
+      height: 30px;
+      margin: 0;
+    }
+
+    .username {
+      margin: 0 5px;
+    }
+  }
+}

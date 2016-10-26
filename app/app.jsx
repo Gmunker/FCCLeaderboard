@@ -5,7 +5,11 @@ import {Provider} from 'react-redux';
 
 const store = require('configureStore').configure();
 import * as actions from 'actions';
-import Leaderboard from 'Leaderboard';
+import Nav from 'Nav';
+import RecentUsers from 'RecentUsers';
+import AlltimeUsers from 'AlltimeUsers';
+import Users from 'Users';
+import LandingPage from 'LandingPage';
 
 store.dispatch(actions.getRecentUsers());
 store.dispatch(actions.getAlltimeUsers());
@@ -18,7 +22,11 @@ require('style!css!sass!applicationStyles');
 
 ReactDOM.render(
 	<Provider store={store}>
-		<div>
-			<Leaderboard />
-		</div>
+		<Router history={hashHistory}>
+			<Route path="/">
+				<Route path="AlltimeUsers" component={AlltimeUsers} />
+				<Route path="RecentUsers" component={RecentUsers} />
+				<IndexRoute component={LandingPage} />
+			</Route>
+		</Router>
 	</Provider>,document.getElementById('app'));

@@ -3,14 +3,23 @@ import {connect} from 'react-redux';
 
 export class Users extends React.Component {
   render() {
-    let {username, img, alltime, recent, lastUpdate} = this.props;
+    let {username, img, alltime, recent, lastUpdate, rank} = this.props;
     return (
-      <tr>
-        <td>""</td>
-        <td>{username}</td>
-        <td>{recent}</td>
-        <td>{alltime}</td>
-        <td>{lastUpdate.substr(0,10)}</td>
+      <tr className="user-row">
+        <td><p>{rank}</p></td>
+        <td className="td-username">
+          <a
+            className="td-username-link"
+            href={`https://www.freecodecamp.com/${username}`}
+            target="_blank"
+            >
+            <img className="userpic" src={img} />
+            <p className="username">{username}</p>
+          </a>
+        </td>
+
+        <td><p>{recent}</p></td>
+        <td><p>{alltime}</p></td>
       </tr>
     )
   }
