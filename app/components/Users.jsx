@@ -20,6 +20,7 @@ export class Users extends React.Component {
 
         <td><p>{recent}</p></td>
         <td><p>{alltime}</p></td>
+        <th className="show-for-large" width="50"><p>{lastUpdate.substr(0,10)}</p></th>
       </tr>
     )
   }

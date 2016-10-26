@@ -17,7 +17,7 @@ class UserList extends React.Component {
       })
     }
     return (
-      <div className="columns small-10 medium-7 large-6 small-centered">
+      <div className="columns small-12 medium-8 large-6 small-centered">
         <Nav />
         <table>
           <thead>
@@ -26,6 +26,7 @@ class UserList extends React.Component {
               <th width="350">Username</th>
               <th width="50">Recent</th>
               <th width="50">Alltime</th>
+              <th className="show-for-large" width="50">Last Updated</th>
             </tr>
           </thead>
           <tbody>
